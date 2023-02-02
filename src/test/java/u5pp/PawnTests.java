@@ -50,7 +50,7 @@ public class PawnTests {
         board[6][1] = new Pawn(board, 7, 0, false);
         assertFalse(board[6][1].canMoveTo(7, 1));
         assertAll(
-            () -> assertFalse(board[5][1].canMoveTo(4, 1), "black pawns must not be able to move backward"), 
+            () -> assertFalse(board[5][1].canMoveTo(4, 1), "white pawns must not be able to move backward"), 
             () -> assertFalse(board[6][1].canMoveTo(7, 1), "false pawns must not be able to move backward") 
         );
     }
@@ -77,7 +77,7 @@ public class PawnTests {
     public void Pawn_canMoveTwoSpacesSecondTurn_returnsFalse(){
         board[0][0].moveTo(1, 0);
         board[7][0].moveTo(6, 0);
-      
+    
         assertAll(
             () -> assertFalse(board[1][0].canMoveTo(3, 0), "black pawns must not be able to move two spaces on their second turn"), 
             () -> assertFalse(board[6][0].canMoveTo(4, 0), "white pawns must not be able to move two spaces on their second turn") 

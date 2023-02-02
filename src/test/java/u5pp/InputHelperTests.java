@@ -28,6 +28,7 @@ public class InputHelperTests {
             for (int r = 0; r < 8; r++) {
                 int[] output = inputHelper.getChessLocation("test prompt: allowed input");
                 String currLocation = scanner2.nextLine();
+                System.out.println(String.format("intput helper given %s, and outputs row %s, col %s", currLocation, output[0], output[1]));
                 assertEquals(r, output[0], String.format("When given %s, row should be %s, not %s", currLocation, r, output[0])); // row
                 assertEquals(c, output[1], String.format("When given %s, col should be %s, not %s", currLocation, c, output[1])); // column
             }
