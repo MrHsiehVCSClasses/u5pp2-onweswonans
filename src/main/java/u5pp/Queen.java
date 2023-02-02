@@ -5,7 +5,7 @@ public class Queen extends ChessPiece{
     public Queen(ChessPiece[][] board, int row, int col, boolean isWhite) {
         super(board, row, col, isWhite);
     }
-
+    // checks if bishop can move in direction user inputs
     public boolean canMoveTo(int row, int col){
         if(super.canMoveTo(row, col) == true){
             if(java.lang.Math.abs(row - this.row) == java.lang.Math.abs(col-this.col)){

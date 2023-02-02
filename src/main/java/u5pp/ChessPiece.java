@@ -28,7 +28,7 @@ public class ChessPiece {
     public boolean getIsWhite(){
         return isWhite;
     }
-
+    // checks if bishop can move in direction user inputs
     public boolean canMoveTo(int row, int col){
         if(row < 0 || row > board.length-1){
             System.out.println("out of bounds silly goose");
@@ -46,7 +46,7 @@ public class ChessPiece {
         return true;
 
     }   
-
+    //makes sure it can make the move diagonally 
     public boolean clearDiagnal(int row, int col){
         System.out.println("entering clearDiagnal at" + row +" " + col);
         int colcnt = 1;
@@ -97,7 +97,7 @@ public class ChessPiece {
         }
         return true;
     }
-
+    //checks for moves that are horizontal and vertical. if not, returns false
     public boolean clearHorNVert(int row, int col){
         if(this.row == row && this.col != col){
             if(col > this.col){

@@ -5,6 +5,7 @@ public class King extends ChessPiece {
     public King(ChessPiece[][] board, int row, int col, boolean isWhite) {
         super(board, row, col, isWhite);
     }
+        // checks if bishop can move in direction user inputs
     public boolean canMoveTo(int row, int col){
         if(super.canMoveTo(row, col) == true){
             if(movingNextToKing(row, col) == true){
@@ -18,14 +19,7 @@ public class King extends ChessPiece {
 
     }
 
-    private boolean movingNextToKing(int row, int col){
-        for(int i = 0; i < board.length ; i++){
-            for(int j = 0; j<board.length ; j++){
-                if((board[i][j].toString().equals("k") || board[i][j].toString().equals("K")) && board[i][j] != board[this.row][this.col]){
-                    
-                }
-            }
-        }
+    private boolean movingNextToKing( int row, int col){
         return true;
     }
 

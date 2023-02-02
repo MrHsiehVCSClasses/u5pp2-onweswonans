@@ -7,7 +7,7 @@ public class Pawn extends ChessPiece{
         isFirstMove = true;
     }
     
-
+    // checks if bishop can move in direction user inputs
     public boolean canMoveTo(int row, int col) {
         if(super.canMoveTo(row, col) == true){
             if(board[this.row][this.col].isWhite == true && row == this.row +1 || board[this.row][this.col].isWhite == false && row == this.row -1){

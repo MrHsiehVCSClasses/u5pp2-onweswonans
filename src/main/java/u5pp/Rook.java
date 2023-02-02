@@ -5,7 +5,7 @@ public class Rook extends ChessPiece {
     public Rook(ChessPiece[][] board, int row, int col, boolean isWhite) {
         super(board, row, col, isWhite);
     }
-
+    // checks if bishop can move in direction user inputs
     public boolean canMoveTo(int row, int col){
         if(super.canMoveTo(row, col) == true){
             if(row == this.row && col != this.col){

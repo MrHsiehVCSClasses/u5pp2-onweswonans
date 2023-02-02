@@ -3,7 +3,7 @@ package u5pp;
 import java.util.Scanner;
 
 public class Chess {
-
+// plays the game allowing you to pay byyourself 
     public void play(Scanner scan){
         Scanner my = new Scanner(System.in);
         InputHelper help = new InputHelper(my);
